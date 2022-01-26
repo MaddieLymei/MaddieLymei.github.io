@@ -75,23 +75,28 @@ figcaption{
     width: 100%;
 }
 
+/* ABOUT */
 .aboutPhotos{
-    width: 70%;
+    width: 100%;
 }
 
-.aboutSection h1{
+.aboutSectionSpacing{
+    margin-bottom: 1%;
+}
+
+.aboutArticle h1{
     font-size: xxx-large;
     margin-left: 40%;
     font-family: Arial;
 }
 
-.aboutSection h2{
+.aboutArticle h2{
     font-size: xx-large;
     margin-left: 31%;
     font-family: Arial;
 }
 
-.aboutSection a{
+.aboutArticle a{
     color: #f3f0f1;
     font-weight: bold;
     font-family: Arial;
@@ -100,12 +105,12 @@ figcaption{
     width: 50%;
 }
 
-.articlePicSection{
+.sectionDescription{
     width: 100%;
     font-family: Arial;
 }
 
-.picSection1{
+.aboutMeSection{
     margin-left: 2%;
     color: #f3f0f1;
     width: 90%;
@@ -113,6 +118,7 @@ figcaption{
     box-shadow: 0.25em 0.25em #7a7a7a;
     border-radius: 0.8125em;
     background-color: #474546;
+    margin-bottom: 1%;
 }
 
 
@@ -147,6 +153,11 @@ figcaption{
 .gallerySection1 h1{
     font-size: xx-large;
     font-family: Arial;
+}
+
+.galleryArticle, .galleryArticle h1{
+    font-size: xxx-large;
+    margin-top: 7%;
 }
 /* CONTACT HTML */
 
@@ -240,4 +251,9 @@ figcaption{
 
 .contactpage figcaption{
     margin-left: 5.5%;
+}
+
+.contactForm input{
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
