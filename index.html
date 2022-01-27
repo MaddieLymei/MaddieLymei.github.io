@@ -124,8 +124,15 @@
         <button id="prev"><a class="arrow"></a></button>
             <img id="carouselImg" src="" alt="Incorrect Programming" class="galleryPic">
         <button id="next"><a class="arrow"></a></button>
-
-        </section>
+    </section>
+    <section class="galleryOptionSection">
+        <label for="galleryOption">Choose a Gallery:</label>
+        <select name="galleryOption" id="galleryOption" onchange="getOption()">
+            <option value="myAnimals">Maddie's Adopted Pets</option>
+            <option value="pastCharityProjects">Past Charity Projects</option>
+        </select>
+        
+    </section>
     
 </article>
 
@@ -134,24 +141,37 @@
     const img = document.getElementById('carouselImg');
     const next = document.getElementById('next');
     const prev = document.getElementById('prev');
-    
+    const galleryOption = document.getElementById('galleryOption');
+
     let animalPics = [
         'Pics\\Animals\\Cinnamon 1.jpg', 
-        'Pics\\Animals\\DA 4.jpg',
         'Pics\\Animals\\Cinnamon 2.jpg',
-        'Pics\\Animals\\Cinnamon 3.JPG'
+        'Pics\\Animals\\Cinnamon 3.JPG',
+        'Pics\\Animals\\Bushka and Catthew.jpeg',
+        'Pics\\Animals\\Yogi.jpg',
+        'Pics\\Animals\\Storm and Lucky.jpg',
+        'Pics\\Animals\\Ash.jpg'
     ] ;
 
-    let personalPics = [
-        'Pics\\Me\\Me 5.jpeg'
-    ];
-
     let charityPics = [
-        'Pics\\People\\Gresham 2.jpg'
+        'Pics\\People\\Gresham 3.jpg',
+        'Pics\\People\\WheelChair 1.jpg',
+        'Pics\\People\\Wheelchair 2.jpg'
     ];
 
-    let arrSelected = animalPics;
 
+    let arrSelected = [];
+    
+    
+    function getOption(){
+        if(galleryOption.value == "myAnimals") {
+            arrSelected = animalPics;
+            return;
+        } 
+            arrSelected = charityPics;
+    }
+
+    getOption();
     img.src = arrSelected[0];
     let pos = 0;
 
@@ -175,7 +195,7 @@
         img.src = arrSelected[pos-1];
         pos--;
     }
-
+    galleryOption.addEventListener("click", getOption)
     next.addEventListener("click", moveNext);
     prev.addEventListener("click", movePrev);
     
@@ -185,18 +205,20 @@
 
 <!--CONTACT-->
 
-<article class="contactArticle">
+<article id="CONTACT" class="contactArticle">
     <h1>CONTACT </h1>
     <form class="contactForm"> 
-        <label class="ContactLabels">Name:</label><input type="text">
+        <label>Name:</label><input type="text">
         
-        <label  class="ContactLabels">Email:</label><input type="email">
+        <label>Email:</label><input type="email">
         
+        <Label>Message:</Label>
         <section class="messageSection">
-        <Label  class="ContactLabels">Message:</Label>
+            
         <textarea>Input your message here</textarea>
+
         </section>
-        
+
         <button type="submit">SEND</button>
     </form>
 

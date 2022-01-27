@@ -215,7 +215,7 @@ figcaption{
     display: flexbox;
     justify-content: center;
     
-    margin-top: 2%;
+    margin-top: 10%;
     height: 200%;
 }
 
@@ -226,7 +226,7 @@ figcaption{
 }
 
 .messageSection{
-    display: inline-flex;
+    
 }
 .contactForm label{
     
@@ -237,7 +237,7 @@ figcaption{
 .contactForm input{
     display: list-item;
     width: 80%;
-    padding: 2%;
+    padding: 1%;
     font-size: large;
     border-radius: 0.8125em;
     font-family: Arial;
