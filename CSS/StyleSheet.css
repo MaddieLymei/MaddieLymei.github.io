@@ -11,6 +11,7 @@ nav{
 
 body{
     background-color: #c5c1c2;
+    font-family: Arial;
 }
 
 .topnav a{
@@ -201,37 +202,32 @@ figcaption{
 
 /* CONTACT HTML */
 
-.asideContact{
-    float: left;
-    width: 50%;
-    display: inline-flex;
-    font-family: Arial;
-}
 
 .contactForm{
     
     border-top: 0.5ex solid #474546 ;
     border-left: 0.5ex solid #474546 ; ;
-    width: 100%;
     padding: 5% 5% 5% 5%;
-    font-family: Arial;
 }
 
 
-.contactSection{
-    font-family: Arial;
-    display: inline;
-    float: right;
-    width: 45%;
+.contactArticle{
+    display: flexbox;
+    justify-content: center;
+    
     margin-top: 2%;
     height: 200%;
 }
 
-.contactSection h1{
-    margin-left: 1%;
+.contactArticle h1{
+    justify-content: center;
     font-size: xxx-large;
+    text-align: center;
 }
 
+.messageSection{
+    display: inline-flex;
+}
 .contactForm label{
     
     font-size: x-large;
@@ -269,9 +265,6 @@ figcaption{
 
 }
 
-.contactForm label, .contactForm input, .contactForm textarea, .contactForm button{
-    margin-left: 2%;
-}
 
 .contactImage{
     float: left;
@@ -288,9 +281,6 @@ figcaption{
     
 }
 
-.contactpage figcaption{
-    margin-left: 5.5%;
-}
 
 .contactForm input{
     margin-top: 1%;
