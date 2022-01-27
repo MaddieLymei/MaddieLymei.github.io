@@ -12,8 +12,8 @@
     <header>
         <nav class="topnav" id="MyTopNav" >
             <p class="charityName">HOME</p>
-            <a href="file:///C:/Users/bbdnet2567/Documents/Practise/Madeleine_Lambley_Charity_Website/maddielymei.github.io/Index.html" >Home</a>
-            <a href="#About">About</a>
+            <a href="#HOME" >Home</a>
+            <a href="#ABOUT">About</a>
             <a href="#GALLERY">Gallery</a>
             <a href="#CONTACT">Contact</a>
         </nav>
@@ -22,16 +22,26 @@
 
 
 <!--HOME/INDEX -->
-<article class="picSection">
-    <img class="HomePagePic1" alt="Photo of myself" src="Pics/Me/CoverPhoto.jpg">
-</article>
+<article id="HOME" class="picSection">
+    <img id="homePagePic" class="HomePagePic1" alt="Photo of myself" src="">
+    
+
+    </article>
 <!--HOME/INDEX -->
 
+<script>
+
+    const CoverImg = document.getElementById('homePagePic');
+
+    let arrImg = ["Pics\\Me\\CoverPhoto.jpg", "Pics\\Me\\Me 2.jpg"]
+    CoverImg.src = arrImg[0];
+    
+</script>
 
 <!--ABOUT -->
 
 
-<article id="About" class="aboutArticle">
+<article id="ABOUT" class="aboutArticle">
     <h1>ABOUT</h1>
     
     <section class="aboutMeSection">
@@ -106,34 +116,76 @@
 </article>
 <!--ABOUT-->
 
-<!--Gallery-->
+<!--GALLERY-->
 <article id="GALLERY" class="galleryArticle">
     <h1>GALLERY</h1>
     <section class="slideshowContainer">
 
-        <section class="mySlides fade">
-            <img class="" src="Pics/Animals/Ash.jpg">
-        </section>
-    </section>
-</article>
-<!--Gallery-->
+        <button id="prev"><a class="arrow"></a></button>
+            <img id="carouselImg" src="" alt="Incorrect Programming" class="galleryPic">
+        <button id="next"><a class="arrow"></a></button>
 
-<!--CONTACT-->
-<article id="CONTACT" class="contactpage">
-        
-    <aside class="asideContact">
-        
-        <figure >
-            <img  class="cImage"alt="Image of Madeleine Lambley" src="C:\Users\bbdnet2567\Documents\Practise\Madeleine_Lambley_Charity_Website\Pics\Me\Me.jpg">
-            <figcaption>
-            Photo taken by Tarryn Michelle Foot
-            </figcaption>    
-        </figure>
-    </aside>
+        </section>
+    
+</article>
+
+<!--JS Code implemented in HTML-->
+<script>
+    const img = document.getElementById('carouselImg');
+    const next = document.getElementById('next');
+    const prev = document.getElementById('prev');
+    
+    let animalPics = [
+        'Pics\\Animals\\Cinnamon 1.jpg', 
+        'Pics\\Animals\\DA 4.jpg',
+        'Pics\\Animals\\Cinnamon 2.jpg',
+        'Pics\\Animals\\Cinnamon 3.JPG'
+    ] ;
+
+    let personalPics = [
+        'Pics\\Me\\Me 5.jpeg'
+    ];
+
+    let charityPics = [
+        'Pics\\People\\Gresham 2.jpg'
+    ];
+
+    let arrSelected = animalPics;
+
+    img.src = arrSelected[0];
+    let pos = 0;
+
+    
+    function moveNext(){
+        if (pos >= arrSelected.length - 1){
+            pos = 0;
+            img.src=arrSelected[pos];
+            return;
+        }
+        img.src = arrSelected[pos+1];
+        pos++;
+    }
+
+    function movePrev(){
+        if (pos == 0){
+            pos = arrSelected.length - 1;
+            img.src=arrSelected[pos];
+            return;
+        }
+        img.src = arrSelected[pos-1];
+        pos--;
+    }
+
+    next.addEventListener("click", moveNext);
+    prev.addEventListener("click", movePrev);
     
 
+</script>
+<!--GALLERY-->
 
-<section class="contactSection">
+<!--CONTACT-->
+
+<article class="contactSection">
     <h1>CONTACT </h1>
     <form class="contactForm"> 
         <label class="ContactLabels">Name:</label><input type="text">

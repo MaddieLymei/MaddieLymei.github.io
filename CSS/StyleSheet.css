@@ -136,33 +136,72 @@ figcaption{
 
 /* GALLERY */
 
-.galleryImgSection{
-    display: inline-flex;
+.galleryArticle h1{
+    font-size: xxx-large;
+    text-align: center;
+}
+
+.galleryPic{
+    width: 20%;
+}
+
+.slideshowContainer{
+    width:50;
+    display: flex;
+    justify-content: center;
+    box-shadow: #7a7a7a;
+    border: 1em rgba(0, 0, 0, 0.5);;
+}
+
+.slideshowContainer img{
+    width: 25%;
+    z-index: -2;
+}
+
+.slideshowContainer button{
+    height: 10%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.4em;
+    font-family: "Roboto", sans-serif;
+    display: flex;
     
 }
 
-.galleryImgSection img{
-    width: 100%;
+.arrow{
+    border: solid  0.3em white;
+    display: inline-block;
+    padding: 80.5%;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+   border-top: none;
+   border-left: none;
+    outline: none;
 }
 
-.gallerySection1 a{
-    color: black;
-    font-weight: bold;
+
+#next{
+    margin: auto 0 auto -1.4em;
+    
 }
 
-.gallerySection1 h1{
-    font-size: xx-large;
-    font-family: Arial;
+#next .arrow{
+    transform: rotate(-45deg);
 }
 
-.galleryArticle, .galleryArticle h1{
-    font-size: xxx-large;
-    margin-top: 7%;
+#prev{
+    z-index: 0;
+    margin: auto -1em auto 0;
 }
+
+#prev .arrow{
+    transform: rotate(135deg);
+}
+
 /* CONTACT HTML */
 
 .asideContact{
-    
     float: left;
     width: 50%;
     display: inline-flex;
