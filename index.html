@@ -182,8 +182,9 @@
             img.src=arrSelected[pos];
             return;
         }
-        img.src = arrSelected[pos+1];
         pos++;
+        img.src = arrSelected[pos];
+        
     }
 
     function movePrev(){
@@ -192,10 +193,11 @@
             img.src=arrSelected[pos];
             return;
         }
-        img.src = arrSelected[pos-1];
         pos--;
+        img.src = arrSelected[pos];
+        
     }
-    galleryOption.addEventListener("click", getOption)
+    galleryOption.addEventListener("change", getOption)
     next.addEventListener("click", moveNext);
     prev.addEventListener("click", movePrev);
     
