@@ -137,6 +137,9 @@ figcaption{
 
 /* GALLERY */
 
+.galleryArticle{
+    margin-top: 3%;
+}
 .galleryArticle h1{
     font-size: xxx-large;
     text-align: center;
@@ -208,6 +211,7 @@ figcaption{
     border-top: 0.5ex solid #474546 ;
     border-left: 0.5ex solid #474546 ; ;
     padding: 5% 5% 5% 5%;
+    border-radius: 0.8125em;
 }
 
 
@@ -225,18 +229,14 @@ figcaption{
     text-align: center;
 }
 
-.messageSection{
-    
-}
 .contactForm label{
-    
     font-size: x-large;
     text-align: left;
 } 
 
 .contactForm input{
     display: list-item;
-    width: 80%;
+    width: 78%;
     padding: 1%;
     font-size: large;
     border-radius: 0.8125em;
@@ -245,12 +245,13 @@ figcaption{
 }
 
 .contactForm textarea{
-  width: 80%;
+  width: 78%;
   font-family: Arial;
   height: 30mm;
   border-radius: 0.8125em;
-  padding-top: 1%;
+  padding: 1%;
   margin-top: 1%;
+  font-size: large;
 }
 
 .contactForm button{
